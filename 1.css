@@ -1,0 +1,25 @@
+.good {
+    color:rgb(0, 0, 0);
+    background-color:#ddff00;
+    text-align: center;
+}
+
+.border {
+    border: 3px solid rgb(255, 0, 0);
+    padding: 20px;
+}
+
+.sajin {
+    width: 400px;
+}
+
+.paks {
+    width: 400px;
+    height: 500px;
+    border: 5px solid olivedrab;
+    /*마진은 겉의 공간을 조절해줌*/
+    margin-top: 30px;
+    /*패딩은 안쪽의 공간을 조절해줌. 기본공간보다 공간이 넓어짐.*/
+    padding: 30px;
+
+}
