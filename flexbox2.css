@@ -1,0 +1,40 @@
+body, html {
+    height: 100%;
+}
+
+.container {
+    background: #dadada;
+    padding-top: 100px;
+    height: 80vh; /*viewport hight?*/
+    display: flex;
+}
+
+.item {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.item1 {
+    background-color: #9f90b6;
+    /* order: 2; */
+    /*오더를 이용해 순서변경 가능함. 단, 많이 실무에서 많이 사용안함.*/
+    /* flex-grow: 1; */
+    /*flex-grow를 이용해 크기조절이 가능함. 들어간 숫자는 비율로 생각하기.*/
+    /*flex=shrink도 동일함. 비율이 높을수록 더 많이 줄어듬.*/
+    /*flex-basis:20%;도 그로우와 비슷하게 늘어남.*/
+    align-self: center;
+    /*아이템 하나만 특별하게 배치하길 원할 경우 align-self를 이용하자.*/
+}
+
+.item2 {
+    background-color: #b6b290;
+    /* order: 1; */
+    /* flex-grow: 2; */
+}
+
+.item3 {
+    background-color: #b69098;
+    /* order: 3; */
+    /* flex-grow: 2; */
+}

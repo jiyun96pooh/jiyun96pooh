@@ -1,0 +1,54 @@
+body {
+  /*얘를 안해주면 navbar백에 색을 넣으면 양쪽에 애매하게 공간이 남.*/
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.navbar {
+  display: flex;
+  /*아이템들을 서로 간격을 가지고 정렬되는 것. 첫과 끝은 딱 붙음.*/
+  justify-content: space-between;
+  /*수직선 기준 중간에 두고싶을때 쓰는 것*/
+  align-items: center;
+  background-color: thistle;
+  padding: 8px 12px;
+}
+
+.navbar_logo {
+  font-size: 24px;
+  color: aliceblue;
+}
+
+.navbar_logo i {
+  color: cadetblue;
+}
+
+.navbar_menu {
+  display: flex;
+  list-style: none;
+  /*로과와 소셜사이의 완전한 중간이 되기위해서는 왼쪽에 있던 패딩을 
+  없애줘야 메뉴들이 완벽하게 가운데에 온다.*/
+  padding-left: 0;
+}
+
+.navbar_menu li {
+  /*패딩을 넣어줘야 클릭할 수 있는 범위가 넓어짐. 마진을 넣으면 작아짐.*/
+  padding: 8px 12px;
+}
+
+.navbar_menu li:hover {
+  background-color: rgb(201, 135, 111);
+  border-radius: 15px;
+}
+
+.navbar_social {
+  display: flex;
+  list-style: none;
+  color: aliceblue;
+}
+
+.navbar_social li {
+  padding: 8px 12px;
+}

@@ -1,0 +1,75 @@
+body, html {
+    height: 100%;
+}
+
+.container {
+    background: #dadada;
+    height: 80vh; /*viewport hight?*/
+    display: flex;
+    flex-direction: row; /*왼->오*/
+    /*row, row-reverse, colum, colum-reverse도 쓸 수 있음.*/
+    
+    flex-wrap: nowrap;
+    /*nowrap으로 하면 아이템들이 한 줄에 다 들어감. 웹 사이즈를 줄여도
+    그대로 한줄에 있음. wrap으로 바꾸면 줄어든 만큼 아이템들이 다른줄로 바뀜.
+    reverse도 있음.*/
+
+    /*
+    flex-flow는 flex-direction+flex-wrap을 합친 기능이다.
+    flex-flow: column-reverse nowrap;
+    */
+
+    /*아이템들을 어떻게 배치할건지 결정해주는 것*/
+    justify-content: space-between;/*처음와 끝을 딱 붙이고 나머지는 동일간격*/
+    align-items: baseline;
+}
+
+.item {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.item1 {
+    background-color: #9f90b6;
+}
+
+.item2 {
+    background-color: #b6b290;
+}
+
+.item3 {
+    background-color: #b69098;
+}
+
+.item4 {
+    background-color: #e1d78f;
+}
+
+.item5 {
+    background-color: #bec5b7;
+}
+
+.item6 {
+    background-color: #7bc630;
+}
+
+.item7 {
+    background-color: #5194d8;
+}
+
+.item8 {
+    background-color: #e3f2fd;
+}
+
+.item9 {
+    background-color: #b1bfca;
+}
+
+.item10 {
+    background-color: #d0c0e8;
+}
+
+.item11 {
+    background-color: #e3f2fd;
+}
