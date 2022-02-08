@@ -39,8 +39,8 @@ a {
 }
 
 .navbar_menu li:hover {
-  background-color: rgb(201, 135, 111);
-  border-radius: 15px;
+  background-color: cadetblue;
+  border-radius: 5px;
 }
 
 .navbar_social {
@@ -51,4 +51,57 @@ a {
 
 .navbar_social li {
   padding: 8px 12px;
+}
+
+.navbar_toogleBtn {
+  /* 포지션앱솔루트, 이걸 해줘야 햄버거아이콘이 위로 올라감. */
+  position: absolute;
+  right: 32px;
+  color: cadetblue;
+  font-size: 24px;
+  display: none;
+}
+
+/*반응형을 만들기 위해 필요한 것.*/
+@media screen and (max-width: 768px) {
+  /* flex-direction을 써768px이하가 되면 nav들이 colum으로 바뀜. */
+  .navbar {
+    flex-direction: column;
+    /* align아이템의 fs를 이용해 왼쪽정렬느낌냄. */
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .navbar_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    /* align아이템만 쓰면 가운데 정렬안됨. why? 메뉴 자체 너비가 작기때문에 -> 너비를 100%로 설정해준다. */
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar_menu li {
+    /* 너비가 넓어지면 왼쪽정렬이 됨. 가운데 정렬을 원할시 text-align을 써준다. */
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar_social {
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    display: none;
+  }
+
+  .navbar_toogleBtn {
+    display: block;
+  }
+
+  .navbar_menu.active,
+  .navbar_social.active {
+    display: flex;
+  }
 }
