@@ -4,12 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>생활코딩_WEB2 JS_18_리팩토링 중복의 제거</title>
+    <title>생활코딩_WEB2 JS_20_배열</title>
+    <!-- 21부터 듣기 -->
 </head>
 <body>
-    <h1><a href="ex1.html">WEB</a></h1>
+    <h1>Array</h1>
+    <h2>Syntax</h2>
+    <script>
+        var coworkers = ["egoing", "leezche"];
+    </script>
+    <h2>get</h2>
+    <script>
+        // 인덱스 0은 이고잉 ~!
+        document.write(coworkers[0]);
+        document.write(coworkers[1]);
+    </script>
+    <h2>count</h2>
+    <script>
+        // 갯수 세기 ~!
+        document.write(coworkers.length);
+    </script>
+
+    <h2>add</h2>
+    <script>
+        coworkers.push('JY');
+        document.write(coworkers.length);
+    </script>
+
 
     <br>
+    <h1><a href="ex1.html">WEB</a></h1>
     <input id="night_day" type="button" value="night" onclick="
      //JS코드임. selector는 css의 셀렉터를 뜻한다고함.
      if(document.querySelector('#night_day').value === 'night'){
