@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생활코딩_22~//21,22는 다시 듣기.</title>
+</head>
+<body>
+    <h1>Loop & Array</h1>
+    <script>
+        var coworkers = ['egoing','leezche','duru','taeho']; 
+    </script>
+    <h2>Co workers</h2>
+    <!-- 실행시 내용 없이 떙떙땡만 있는 것이 맞음. -->
+    <ul>
+        <script>
+            var i = 0;
+            while(i<3){
+                document.write('<li></li>');
+                i = i+1;
+            }   
+        </script>
+    </ul>
+    <!-- 위를 바탕으로 내용을 가져올거면 인텍스의 숫자?(순서?)를 구하면 내용을 가져와준다. -->
+    <ul>
+        <script>
+            var i = 0;
+            while(i<3){
+                document.write('<li>'+coworkers[i]+'</li>');
+                i = i+1;
+            }   
+        </script>
+    </ul>
+
+    <ul>
+        <script>
+            var i = 0;
+            while(i < coworkers.length){
+                document.write('<li><a href="http://a.com/'+coworkers[i]+'">'+coworkers[i]+'</a></li>');
+                i = i+1;
+            }   
+        </script>
+    </ul>
+
+    <ul>
+        <li>egoing</li>
+        <li>leezche</li>
+        <li>duru</li>
+        <li>taeho</li>
+    </ul>
+</body>
+</html>
