@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생코_WEB2_함수_25~27</title>
+</head>
+<body>
+    <h1>Function</h1>
+    <h2>Basic</h2>
+    <ul>
+        <script>
+            function two(){
+                document.write('<li>2-1</li>');
+                document.write('<li>2-2</li>'); 
+            }
+            document.write('<li>1</li>');
+            two();
+            document.write('<li>3</li>');
+            two();
+        </script>
+    </ul>
+    <h2>Parameter & Argument // 매개변수와 인자</h2>
+    <script>
+        function onePone(){
+            document.write(1+1+'<br>');
+        }
+        function sum(a,b){
+            // 여기서 a,b를 매개하는 변수로 파라미터라고 함.
+            document.write(a+b+'<br>');
+        }
+        function sumColorRed(a,b){
+            document.write('<div style="color:red">'+a+b+'</div><br>')
+        }
+        onePone();
+        sum(2,3); //5
+        sumColorRed(3,5) // 8이 아닌 35가 나오는게 맞음.
+    </script>
+    <h2>Return // 출력</h2>
+    <script>
+        function sum2(a,b){
+            return a+b;
+        }
+        sum2(2,3);
+        document.write(sum2(2,3)+'<br>');
+        document.write('<div style="color:red">'+sum2(2,3)+'</div>');
+        document.write('<div style="font-size:3rem">'+sum2(2,3)+'</div>');
+    </script>
+</body>
+</html>

@@ -4,52 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>생활코딩_WEB2 JS_24부터 듣기 !!!</title>\
-    <!-- 데이, 나이트에 따라 링크 색상이 달라지는 기능 -->
+    <title>생활코딩_WEB2 JS_24</title>\
+    <!-- 함수 생각하면 수납상자가 생각난다고함.
+    오늘 배운 코드를 통해 엄청난 수의 코드에서 여러개의 파우더블루라는 컬러를 
+    다른 컬러로 한번에 수정할 수 있게 해주는 코드?를 공부해본 시간인다. -->
+    <!-- 나는 백컬러를 오렌지로 바꿔줌. 이렇게 코드를 쓰면 코드가 안길어지고
+         여러개 수정에 용이하게 됨. -->
+    <script>
+    function nightdayHandler(self){
+        var target = document.querySelector('body');
+        if(self.value === 'night'){
+            target.style.backgroundColor='black';
+            target.style.color='white';
+            self.value = 'day';
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i<alist.length){
+                alist[i].style.color='powderblue';
+                i = i+1;
+            }
+
+            } else {
+            target.style.backgroundColor='orange';
+            target.style.color='black';
+            self.value = 'night';
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i<alist.length){
+                alist[i].style.color='red';
+                i = i+1;
+            }
+
+            }
+    } 
+    </script>
 </head>
 <body>
     <h1><a href="ex1.html">WEB</a></h1>
 
     <br>
-    <input id="night_day" type="button" value="night" onclick="
-     //JS코드임. selector는 css의 셀렉터를 뜻한다고함.
-     if(document.querySelector('#night_day').value === 'night'){
-        document.querySelector('body').style.backgroundColor='black';
-        document.querySelector('body').style.color='white';
-        document.querySelector('#night_day').value = 'day';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i<alist.length){
-            alist[i].style.color='powderblue';
-            i = i+1;
-        }
-
-        } else {
-        document.querySelector('body').style.backgroundColor='white';
-        document.querySelector('body').style.color='black';
-        document.querySelector('#night_day').value = 'night';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i<alist.length){
-            alist[i].style.color='red';
-            i = i+1;
-        }
-
-        }
-    ">
+    <!-- 온클릭에 nightdayHandler(self)라고 써도 똑같이 동작되는데 왜 굳이 셀프라고 ...? -->
+    <input id="night_day" type="button" value="night" onclick="nightdayHandler(this)">
+    <input id="night_day" type="button" value="night" onclick="nightdayHandler(this)">
+    <input id="night_day" type="button" value="night" onclick="nightdayHandler(this)">
+    <input id="night_day" type="button" value="night" onclick="nightdayHandler(this)">
     <br>
 
-    <input type="button" value="night" onclick="
-     //JS코드임. selector는 css의 셀렉터를 뜻한다고함.
-     document.querySelector('body').style.backgroundColor='black';
-     document.querySelector('body').style.color='white';
-    ">
-    <input type="button" value="day" onclick="
-     document.querySelector('body').style.backgroundColor='white';
-     document.querySelector('body').style.color='black';
-    ">
     <ol>
         <li><a href="1.html">HTML</a></li>
         <li><a href="ex2.html">CSS</a></li>
@@ -74,32 +76,63 @@
     repellendus illo cumque est dolorum qui. 
     Repellendus dolorem dignissimos temporibus aperiam corrupti eveniet.
     </p>
-    <input id="night_day2" type="button" value="night" onclick="
-    //#night_day2 이런식으로이름을 바꿔줘야 클릭시 value가 알맞게 바뀜.
-    if(document.querySelector('#night_day2').value === 'night'){
-       document.querySelector('body').style.backgroundColor='black';
-       document.querySelector('body').style.color='white';
-       document.querySelector('#night_day2').value = 'day';
+    <input id="night_day" type="button" value="night" onclick="
+     //JS코드임. selector는 css의 셀렉터를 뜻한다고함.
+     var target = document.querySelector('body');
+     if(this.value === 'night'){
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        this.value = 'day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i<alist.length){
+            alist[i].style.color='powderblue';
+            i = i+1;
+        }
+
+        } else {
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        this.value = 'night';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i<alist.length){
+            alist[i].style.color='red';
+            i = i+1;
+        }
+
+        }
+    ">
+    <input id="night_day" type="button" value="night" onclick="
+    //JS코드임. selector는 css의 셀렉터를 뜻한다고함.
+    var target = document.querySelector('body');
+    if(this.value === 'night'){
+       target.style.backgroundColor='black';
+       target.style.color='white';
+       this.value = 'day';
+
+       var alist = document.querySelectorAll('a');
+       var i = 0;
+       while(i<alist.length){
+           alist[i].style.color='powderblue';
+           i = i+1;
+       }
+
        } else {
-       document.querySelector('body').style.backgroundColor='white';
-       document.querySelector('body').style.color='black';
-       document.querySelector('#night_day2').value = 'night';
+       target.style.backgroundColor='white';
+       target.style.color='black';
+       this.value = 'night';
+
+       var alist = document.querySelectorAll('a');
+       var i = 0;
+       while(i<alist.length){
+           alist[i].style.color='red';
+           i = i+1;
+       }
+
        }
    ">
-   <br>
-   <input id="night_day3" type="button" value="night" onclick="
-   //document.querySelector('#night_day2')는 자기 자신이므로 this로 바꾸기 가능.
-   //document.querySelector('body')을 var target 변수로 미리 선언해주면 됨.
-   var target = document.querySelector('body');
-   if(this.value === 'night'){
-      target.style.backgroundColor='black';
-      target.style.color='white';
-      this.value = 'day';
-      } else {
-      target.style.backgroundColor='white';
-      target.style.color='black';
-      this.value = 'night';
-      }
-    ">
 </body>
 </html>
